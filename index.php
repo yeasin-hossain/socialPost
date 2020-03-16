@@ -19,9 +19,6 @@
             <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="index.php">Home</a>
         </li>
         <li class="mr-1">
-            <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="createpost.php">New Post</a>
-        </li>
-        <li class="mr-1">
             <a class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="allpost.php">all post</a>
         </li>
         </ul>
@@ -38,9 +35,9 @@
       Search
     </button>
 
-    <button class="flex-shrink-0 ml-2 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-      New Post
-    </button>
+    <a href="createpost.php"
+    class="flex-shrink-0 ml-2 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
+    >New Post</a>
 
 
   </div>

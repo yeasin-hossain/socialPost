@@ -8,9 +8,7 @@
 
 </head>
 <body class="bg-purple-700">
-<?php
-    require_once 'main.php';
-?>
+
 <div class="container mx-auto flex flex-wrap ">
 <!-- <nav>
         <ul class="flex border-b">
@@ -48,36 +46,24 @@
             <p class="text-white mt-2"><?php echo  substr($row ['body'],0,200) ?></p>
             
               <!-- See more button section -->
+              <a href="main.php?delete=<?php echo $row['id']; ?>" 
+            class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full uppercase float-right"
+            >Delete</a>
+            
 
-            <!-- <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full uppercase float-right">see more</button> -->
             <a href="createpost.php?edit=<?php echo $row['id']; ?>" 
             class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full uppercase float-right"
             >Edit</a>
-
-
-            <a href="main.php?delete=<?php echo $row['id']; ?>" 
+            
+            <a href="read.php?read=<?php echo $row['id']; ?>" 
             class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full uppercase float-right"
-            >Delete</a>
+            >Read</a>
+            
         </div>
 
     </section>
 
     <?php endwhile ?>
-        
-        <form action="main.php">
-            <?php
-                if($update == true):
-            ?>
-        <input type="text" name="title" value="<?php echo $title ?>">
-        <textarea name="body"  cols="30" rows="10">
-       <?php echo $body ?>
-        </textarea>
-        <button type="submit" name="edit"
-            class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-            type="button">Edit</button>
-        </form>
-        <?php endif ?>
-    
         
   
 </div>
